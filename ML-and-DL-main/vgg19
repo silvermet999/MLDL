@@ -1,0 +1,13 @@
+trained on imageNet
+layers:
+    16 convolutional 
+    3 fully connected (learning non-linear combinations of these features)
+    5 maxpool
+    1 softmax
+    
+input: (224, 224, 3)
+kernel: 3X3
+stride size: 1px
+special padding: special resolution
+maxpooling: 2X2 windows, stride size: 2
+relu
