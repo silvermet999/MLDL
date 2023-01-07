@@ -1,0 +1,28 @@
+{"intents":  [
+  {
+    "tags" : "greetings",
+    "patterns" : ["bonjour", "bnj", "hello", "cv", "ça vas", "salut"],
+    "responses" : ["bonjour!", "salut!", "cv", "avez-vous besoin d'aide?"]
+  },
+  {
+    "tags" : "goodbye",
+    "patterns" : ["merci", "au revoir", "merci bcp", "bye", "bye bye", "merci beaucoup"],
+    "responses" : ["bonjour!", "salut!", "cv", "avez-vous besoin d'aide?"]
+  },
+  {
+    "tags" : "name",
+    "patterns" : ["appellez", "t'appelles", "nom"],
+    "responses" : ["Je suis Robot"]
+  },
+  {
+    "tags" : "shop",
+    "patterns" : ["services", "choix"],
+    "responses" : ["Allez à la sections services! Merci!!"]
+  },
+  {
+    "tags" : "hours",
+    "patterns" : ["Quand travaillez-", "Quand travailles-", "horaires"],
+    "responses" : ["Du 10h à 17h!"]
+  }
+]
+}
