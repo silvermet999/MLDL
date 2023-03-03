@@ -1,6 +1,0 @@
-uvicorn #start server
-gunicorn #deploy to heroku
-fastapi
-pydantic #pass through requests in appropriate file format
-sklearn
-pandas

@@ -1,4 +1,0 @@
-#start up heroku
-#-w to specify workers
-#-k what to run
-web: gunicorn -w 2 -k uvicorn.workers.UvicornWorker mlapi:api

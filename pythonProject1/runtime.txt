@@ -1,2 +1,0 @@
-#type of runtime to use
-python-3.9.7
