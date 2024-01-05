@@ -1,13 +1,18 @@
 from roboflow import Roboflow
 import ultralytics
 from ultralytics import YOLO
-from IPython import display
 import os
 from IPython.display import display, Image
 display.clear_output()
 ultralytics.checks()
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+import torch
+
+# Check if CUDA (GPU) is available
+if torch.cuda.is_available():
+    # Enable memory growth for all available GPUs
+    for i in range(torch.cuda.device_count()):
+        torch.cuda.set_per_process_memory_growth(i, True)
+
         
 model = YOLO("yolov8s.pt")
 
