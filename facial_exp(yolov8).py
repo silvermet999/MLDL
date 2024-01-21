@@ -4,9 +4,9 @@ from ultralytics import YOLO
 import os
 from IPython.display import clear_output, Image
 from torch.cuda import empty_cache
-#ipc_collect -> Force collects GPU memory after it has been released by CUDA IPC.
-#set_sync_debug_mode -> Sets the debug mode for cuda synchronizing operations.
-#communication collectives
+# ipc_collect -> Force collects GPU memory after it has been released by CUDA IPC.
+# set_sync_debug_mode -> Sets the debug mode for cuda synchronizing operations.
+# communication collectives
 
 from torch import cuda
 clear_output()
@@ -22,6 +22,6 @@ import torch
         
 model = YOLO("yolov8s.pt")
 
-# yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
+!yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
 
 
