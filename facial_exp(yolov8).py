@@ -21,6 +21,6 @@ print({device})
 # torch.load("yolov8s.pt")
 model = YOLO("yolov8s.yaml").to(device)
 
-# !TORCH_CUDA_ARCH_LIST="3.5+PTX" TORCH_NVCC_FLAGS="-Xfatbin -compress-all" TORCH_USE_CUDA_DSA=1 yolo task=detect mode=train model=yolov8s.yaml data=data.yaml epochs=50 imgsz=60
+!TORCH_CUDA_ARCH_LIST="3.5+PTX" TORCH_NVCC_FLAGS="-Xfatbin -compress-all" TORCH_USE_CUDA_DSA=1 yolo task=detect mode=train model=yolov8s.yaml data=data.yaml epochs=50 imgsz=60
 
 
