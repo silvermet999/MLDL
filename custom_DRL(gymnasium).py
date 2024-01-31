@@ -2,7 +2,6 @@
 # cd gym-examples
 # python -m venv .env
 # source .env/bin/activate
-# pip install -e .
 
 import gymnasium as gym
 import gym_examples
