@@ -25,3 +25,23 @@ for _ in range(1, eps+1):
         score += reward
         env.render()
     print('Episode:{} Score:{}'.format(_, score))
+
+
+
+# -------------------------------------------------------------------------------------------------------
+
+from keras.models import Sequential
+from keras.layers import Dense, Flatten
+from keras.optimizers import Adam
+import main
+
+states = main.observation
+actions = main.action
+
+def GW_model(states, actions):
+    model = Sequential()
+    model.add(Flatten(input_shape=(1, states)))
+    model.add(Dense(actions, activation="softmax"))
+
+GW_model = GW_model(states, actions)
+GW_model.summary()
