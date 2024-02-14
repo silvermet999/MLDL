@@ -2,12 +2,13 @@
 
 import gymnasium as gym
 import gym_examples
+from gym_examples.wrappers.discrete_actions import DiscreteActions
 
 
 env = gym.make('gym_examples/GridWorld-v0', size=10)
-env.observation_space.shape
-wrapped_env = FlattenObservation(env)
-wrapped_env.observation_space.shape
+# env.observation_space.shape
+wrapped_env = DiscreteActions(env, 4)
+print(wrapped_env.reset())
 # an action space is the set of all possible actions that an agent can take in a given environment. It defines the range of actions that can be performed.
 # setting the seed for the random number generator associated with the action space.
 env.action_space.seed(42)
